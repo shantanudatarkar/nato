@@ -1,1 +1,14 @@
-pagal potte ahe
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                git 'https://github.com/shantanudatarkar/nato.git'
+                sh 'ls'
+                sh 'echo "hello guys" >> mumbai1'
+                sh 'echo "madarchod ahe" >> mumbai1'
+                sh 'cat mumbai1'
+            }   
+        }
+    }
+}
